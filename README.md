@@ -7,8 +7,8 @@ Historical OHLCV data is pulled via yfinance. Daily log returns and rolling vola
 A Gaussian HMM (via hmmlearn) is fit to the return/volatility feature matrix. The model learns three latent states, which are then mapped to bull, bear, and sideways regimes by inspecting the mean return and volatility of each state. The HMM uses the Baum-Welch algorithm (Expectation-Maximization) to estimate transition probabilities and emission parameters, and the Viterbi algorithm to decode the most likely regime sequence given observed data.
 3. Regime-Specific Strategies
 
-Bull: Momentum strategy — go long when price is above its 50-day moving average
-Bear: Risk-off — move to cash or take a short position
+Bull: Momentum strategy (go long when price is above its 50-day moving average)
+Bear: Risk-off (move to cash or take a short position)
 Sideways: Mean-reversion — buy when price dips below the lower Bollinger Band, sell when it reverts to the mean
 
 4. Walk-Forward Validation
