@@ -9,7 +9,7 @@ A Gaussian HMM (via hmmlearn) is fit to the return/volatility feature matrix. Th
 
 Bull: Momentum strategy (go long when price is above its 50-day moving average)
 Bear: Risk-off (move to cash or take a short position)
-Sideways: Mean-reversion — buy when price dips below the lower Bollinger Band, sell when it reverts to the mean
+Sideways: Mean-reversion (buy when price dips below the lower Bollinger Band, sell when it reverts to the mean)
 
 4. Walk-Forward Validation
 The system is evaluated using walk-forward testing rather than a single train/test split. A rolling window trains the HMM on a fixed historical period, generates signals on the following out-of-sample window, then steps forward. This prevents lookahead bias and gives a realistic picture of how the strategy would have performed in live trading.
